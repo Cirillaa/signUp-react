@@ -7,6 +7,7 @@ const Auth = () => {
   const [error, setError] = useState(null);
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState({});
+  const [wrongData,setWrongData] = useState(false)
 
 
   const emailInput = useRef()
@@ -57,6 +58,10 @@ const Auth = () => {
       setLogin(true);
       setUser(checkUser[0])
     }
+
+    if(checkUser.length === 0) {
+      setWrongData(true);
+    }
   }
 
   const closeHandler = () => {
@@ -84,6 +89,7 @@ const Auth = () => {
             <label htmlFor="password">Password:</label>
             <input type="password" id="password" ref={passwordInput} />
           </div>
+          {wrongData && <p className={classes.sendMessage}>Wrong password or login</p>}
           <button className={classes.button}>Login</button>
         </form>
       )}
