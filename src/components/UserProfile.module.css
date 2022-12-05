@@ -33,3 +33,18 @@
 .buttonUnactive:hover {
   color: rgb(255, 255, 255);
 }
+
+@media (max-width: 960px) {
+  .profile {
+    width: 80%
+  }
+}
+
+@media (max-width: 500px) {
+  .profile {
+    width:100%;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+}
