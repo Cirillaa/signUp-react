@@ -1,0 +1,95 @@
+.sectionForm {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.control {
+    margin-bottom: 0.5rem;
+}
+
+.control label {
+    display: block;
+    color: #f6f2f2dd;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.control input {
+    color: white;
+    font-size: 1.5rem;
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 0.8rem;
+    border: 0;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.6);
+    background-color: rgb(255, 255, 255, 0);
+}
+
+.control input:focus {
+    outline: none;
+    background-color: rgb(255, 255, 255, 0);
+}
+
+.control input::selection {
+    background-color: rgb(255, 255, 255, 0);
+}
+
+.button {
+    color: white;
+    background-color: #d25fb5;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    padding: 1rem 0;
+    margin-top: 10%;
+    font-size: 1.1rem;
+    transition: ease-in-out 0.3s;
+}
+.button:hover {
+    background-color: #8d407a;
+}
+.invalid {
+    margin-bottom: 0.5rem;
+}
+.invalid input {
+    color: white;
+    font-size: 1.5rem;
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 0.8rem;
+    border: 0;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.6);
+    background-color: rgba(226, 125, 125, 0.5);
+}
+
+.invalid label {
+        display: block;
+            color: #f6f2f2dd;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            text-align: left;
+}
+
+.sendMessage {
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255, 0.8);
+}
+
+.lessThan3 {
+    width: 33%;
+    height: 2px;
+    background-color: #a74046;
+}
+.lessThan6 {
+    width: 66%;
+    height: 2px;
+    background-color: #ddab5c;
+}
+.moreThan6 {
+    width:100%;
+    height: 2px;
+    background-color: #3f8e3c;
+}
