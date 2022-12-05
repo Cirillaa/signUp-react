@@ -17,16 +17,17 @@ const Registration = () => {
   const emailInput = useRef();
   const passwordInput = useRef();
 
+
   const lengthPasswordHandler = () => {
     const length = passwordInput.current.value.length;
 
-        if (length <= 3) { 
-        } else if (length > 3 && length <= 6) {
-        } else if (length > 6) {
-        } else {
-          return;
-        }
-        
+    if (length <= 6 && length > 3) {
+      return `${classes.lessThan6}`;
+    } else if (length > 6) {
+      return `${classes.moreThan6}`;
+    } else if (length <= 3) {
+      return  `${classes.lessThan3}`;
+    }
   }
 
 
@@ -94,9 +95,13 @@ const initialContent = (
         id="password"
         name="password"
         ref={passwordInput}
-        onChange = {lengthPasswordHandler}
+        onChange={lengthPasswordHandler}
       ></input>
+      <div className={{lengthPasswordHandler}}></div>
     </div>
+    {!formValidity.name && !formValidity.email && !formValidity.password && (
+      <p className={classes.sendMessage}>Enter valid data</p>
+    )}
     <button className={classes.button}>Sign up</button>
   </form>
 );

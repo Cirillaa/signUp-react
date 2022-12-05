@@ -48,3 +48,7 @@
 .button:hover {
   background-color: #8d407a;
 }
+.sendMessage {
+  font-size: 24px;
+  color: white;
+}
